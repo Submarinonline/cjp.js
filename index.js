@@ -17,7 +17,8 @@ const replaceStrDataWithDict = (data, dict = {}) => {
         const translateStr = []
         const splited = data.text.split(new RegExp(orig, 'g'))
         for (let i = 0; i < splited.length - 1; i++) {
-            const begin = splited.slice(0, i + 1).join(orig).length + 1
+            translateStr.push(splited[i])
+            const begin = translateStr.join('').length
             const end = begin + orig.length - 1
             if (
                 data.replaced.some(
@@ -26,10 +27,10 @@ const replaceStrDataWithDict = (data, dict = {}) => {
                         (d.begin <= end && end <= d.end)
                 )
             ) {
-                translateStr.push(splited[i], orig)
+                translateStr.push(orig)
                 continue
             } else {
-                translateStr.push(splited[i], dict[orig])
+                translateStr.push(dict[orig])
                 changed = true
                 if (orig.length == dict[orig].length) {
                     data.replaced.push({ begin, end })
