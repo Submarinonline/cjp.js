@@ -22,10 +22,12 @@ const replaceStrDataWithDict = (data, dict = {}) => {
         for (let i = 0; i < splited.length - 1; i++) {
             const origStr = data.text.match(re)[i]
             const correctStr = dict[orig]
+
+            translateStr.push(splited[i])
+
             const begin = translateStr.join('').length
             const origEnd = begin + origStr.length - 1
 
-            translateStr.push(splited[i])
             if (
                 data.replaced.some(
                     d =>
