@@ -13,35 +13,41 @@ const strData = class {
 const replaceStrDataWithDict = (data, dict = {}) => {
     if (!data.text) return new strData(data)
     for (const orig in dict) {
-        let changed = false
         const translateStr = []
-        const splited = data.text.split(new RegExp(orig, 'g'))
+        const re = new RegExp(orig, 'g')
+        const splited = data.text.split(re)
+
+        let changed = false
+
         for (let i = 0; i < splited.length - 1; i++) {
-            translateStr.push(splited[i])
+            const origStr = data.text.match(re)[i]
+            const correctStr = dict[orig]
             const begin = translateStr.join('').length
-            const end = begin + orig.length - 1
+            const origEnd = begin + origStr.length - 1
+
+            translateStr.push(splited[i])
             if (
                 data.replaced.some(
                     d =>
                         (d.begin <= begin && begin <= d.end) ||
-                        (d.begin <= end && end <= d.end)
+                        (d.begin <= origEnd && origEnd <= d.end)
                 )
             ) {
-                translateStr.push(orig)
+                translateStr.push(origStr)
                 continue
             } else {
-                translateStr.push(dict[orig])
+                translateStr.push(correctStr)
                 changed = true
-                if (orig.length == dict[orig].length) {
-                    data.replaced.push({ begin, end })
+                if (origStr.length == correctStr.length) {
+                    data.replaced.push({ begin, end: origEnd })
                 } else {
-                    const diffLen = dict[orig].length - orig.length
+                    const diffLen = correctStr.length - origStr.length
+                    data.replaced.push({ begin, end: origEnd + diffLen })
                     data.replaced = data.replaced.map(d =>
                         begin < d.begin
                             ? { begin: d.begin + diffLen, end: d.end + diffLen }
                             : d
                     )
-                    data.replaced.push({ begin, end: end + diffLen })
                 }
             }
         }
