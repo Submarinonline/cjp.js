@@ -1,6 +1,7 @@
 const cjpDictWord = require('./dict/word.json')
 const cjpDictKana = require('./dict/kana.json')
 const cjpDictKanji = require('./dict/kanji.json')
+const cjpDictPeople = require('./dict/people.json')
 const cjpDictEmoji = require('./dict/emoji.json')
 
 const strData = class {
@@ -65,10 +66,11 @@ const translate = (text = '') => {
     if (typeof text !== 'string') throw new Error('Invalid Text')
     if (!text) return ''
     let data = new strData({ text })
+    data = replaceStrDataWithDict(data, cjpDictEmoji)
+    data = replaceStrDataWithDict(data, cjpDictPeople)
     data = replaceStrDataWithDict(data, cjpDictWord)
     data = replaceStrDataWithDict(data, cjpDictKana)
     data = replaceStrDataWithDict(data, cjpDictKanji)
-    data = replaceStrDataWithDict(data, cjpDictEmoji)
     return data.text
 }
 
