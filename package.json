@@ -1,6 +1,6 @@
 {
     "name": "cjp",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "description": "怪レい翻訳ライブラリ",
     "main": "./index.js",
     "scripts": {},
