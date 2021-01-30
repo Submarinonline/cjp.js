@@ -1,7 +1,7 @@
-const cjpDictWord = require('./dict/word.json')
+const cjpDictCommon = require('./dict/common.json')
+const cjpDictPNoun = require('./dict/propernoun.json')
 const cjpDictKana = require('./dict/kana.json')
 const cjpDictKanji = require('./dict/kanji.json')
-const cjpDictPeople = require('./dict/people.json')
 const cjpDictEmoji = require('./dict/emoji.json')
 
 const strData = class {
@@ -67,8 +67,8 @@ const translate = (text = '') => {
     if (!text) return ''
     let data = new strData({ text })
     data = replaceStrDataWithDict(data, cjpDictEmoji)
-    data = replaceStrDataWithDict(data, cjpDictPeople)
-    data = replaceStrDataWithDict(data, cjpDictWord)
+    data = replaceStrDataWithDict(data, cjpDictPNoun)
+    data = replaceStrDataWithDict(data, cjpDictCommon)
     data = replaceStrDataWithDict(data, cjpDictKana)
     data = replaceStrDataWithDict(data, cjpDictKanji)
     return data.text
