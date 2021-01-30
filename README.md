@@ -12,7 +12,7 @@ const { translate } = require('cjp')
 console.log(translate('おはようございます'))
 ```
 
-## ブラウザ等に組み込む場合
+## HTML等に組み込む場合
 
 `index.js`を`cjp.js`等の適当なファイルにコピーした後、ファイル末尾にある
 
@@ -32,7 +32,7 @@ window.cjp = {...}
 parcel build index.js
 ```
 
-を実行します(バンドラーはお好みのものを)。
+を実行します。(バンドラーはお好みのものを)  
 parcelの場合は`dist`以下に圧縮されたjsファイルがあるので、
 
 ```html
