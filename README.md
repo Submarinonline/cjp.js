@@ -14,6 +14,8 @@ console.log(translate('おはようございます'))
 
 ## HTML等に組み込む場合
 
+### 自分でビルドする
+
 `index.js`を`cjp.js`等の適当なファイルにコピーした後、ファイル末尾にある
 
 ```js
@@ -43,3 +45,14 @@ parcelの場合は`dist`以下に圧縮されたjsファイルがあるので、
 ```
 
 という風に使えるはずです
+
+### 仕様変更を追える人
+
+今動いていても将来動いているかは知らないよ
+
+```html
+<script src="https://lib.sbmr.in/cjp.js"></script>
+<script>
+    console.log(cjp.translate('おはようございます'))
+</script>
+```
