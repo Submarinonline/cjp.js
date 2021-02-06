@@ -4,7 +4,7 @@
 
 怪レい翻訳ライブラリ
 
-## 使い方
+## 使い方(Node)
 
 ```js
 const { translate } = require('cjp')
@@ -12,9 +12,9 @@ const { translate } = require('cjp')
 console.log(translate('おはようございます'))
 ```
 
-## HTML等に組み込む場合
+## 使い方(HTML)
 
-### 自分でビルドする
+### 自前ビルド
 
 `index.js`を`cjp.js`等の適当なファイルにコピーした後、ファイル末尾にある
 
