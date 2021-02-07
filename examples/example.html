@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <textarea id="inputBox" placeholder="ここに入力"></textarea>
+  <textarea
+    id="resultBox"
+    placeholder="正レい日本语が出力されゑ！"
+    readonly
+  ></textarea>
+  <!-- <script src="https://lib.sbmr.in/cjp.js"></script> -->
+  <!--
+    今後も同じように使えるという保証はないので自分でビルドすることをお勧めします。
+    詳しくは./example.browser.jsのコメントに書いてあります。
+  -->
+  <script src="/path/to/cjp.js"></script>
+  <script>
+    const putResult = text =>
+      (document.querySelector('#resultBox').value = text)
+
+    document
+      .querySelector('#inputBox')
+      .addEventListener('input', ({ target: { value: text } }) => {
+        putResult(cjp.translate(text))
+      })
+  </script>
+</body>
