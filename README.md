@@ -7,9 +7,9 @@
 ## 使い方(Node)
 
 ```js
-const { translate } = require('cjp')
+const { generate } = require('cjp')
 
-console.log(translate('おはようございます'))
+console.log(generate('おはようございます'))
 ```
 
 ## 使い方

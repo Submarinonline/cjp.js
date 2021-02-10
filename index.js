@@ -62,20 +62,22 @@ const replaceStrDataWithDict = (data, dict = {}) => {
     return new strData(data)
 }
 
-const translate = (text = '') => {
+const generate = (text = '') => {
     if (typeof text !== 'string') throw new Error('Invalid Text')
     if (!text) return ''
+
     let data = new strData({ text })
     data = replaceStrDataWithDict(data, cjpDictEmoji)
     data = replaceStrDataWithDict(data, cjpDictPNoun)
     data = replaceStrDataWithDict(data, cjpDictCommon)
     data = replaceStrDataWithDict(data, cjpDictKana)
     data = replaceStrDataWithDict(data, cjpDictKanji)
+
     return data.text
 }
 
 module.exports = {
     strData,
     replaceStrDataWithDict,
-    translate
+    generate
 }

@@ -2,7 +2,7 @@
     <div>
         <textarea
             placeholder="ここに入力"
-            @input="result = translate($event.target.value)"
+            @input="result = generate($event.target.value)"
         ></textarea>
         <textarea
             placeholder="正レい日本语が出力されゑ！"
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import { translate } from 'cjp'
+import { generate } from 'cjp'
 
 export default {
     props: {
         result: String
     },
     methods: {
-        translate
+        generate
     }
 }
 </script>

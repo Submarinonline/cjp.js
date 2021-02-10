@@ -1,3 +1,3 @@
-const { translate } = require('cjp')
+const { generate } = require('cjp')
 
-console.log(translate('おはようございます'))
+console.log(generate('おはようございます'))
