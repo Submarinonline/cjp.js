@@ -1,6 +1,6 @@
 # cjp (correctJP)
 
-[![npm version](https://badge.fury.io/js/cjp.svg)](https://badge.fury.io/js/cjp)
+[![npm version](https://badge.fury.io/js/cjp.svg)](https://www.npmjs.com/package/cjp)
 
 怪レい翻訳ライブラリ
 
@@ -14,7 +14,7 @@ const { generate } = require('cjp')
 console.log(generate('おはようございます'))
 ```
 
-## 使い方
+## 使い方(その他)
 
 `examples/`に何個かサンプルを置いてます。
 
