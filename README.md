@@ -6,7 +6,9 @@
 
 [使用例](https://github.com/DevSubmarinonline/correctJP-web)
 
-## 使い方(Node)
+## 使い方
+
+### Node
 
 ```js
 const { generate } = require('cjp')
@@ -14,7 +16,7 @@ const { generate } = require('cjp')
 console.log(generate('おはようございます'))
 ```
 
-## 使い方(その他)
+### その他
 
 `examples/`に何個かサンプルを置いてます。
 
