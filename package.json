@@ -1,17 +1,21 @@
 {
     "name": "cjp",
-    "version": "0.6.1",
-    "description": "怪レい翻訳ライブラリ",
+    "description": "怪レい日本语ライブラリ",
+    "version": "0.6.4",
+    "author": "YamaD <yamad@submarin.online>",
+    "bugs": {
+        "url": "https://github.com/Submarinonline/cjp.js/issues"
+    },
+    "files": [
+        "index.js",
+        "dict"
+    ],
+    "homepage": "https://github.com/Submarinonline/cjp.js#readme",
+    "license": "MIT",
     "main": "./index.js",
-    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Submarinonline/cjp.js.git"
     },
-    "author": "YamaD <yamad@submarin.online>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Submarinonline/cjp.js/issues"
-    },
-    "homepage": "https://github.com/Submarinonline/cjp.js#readme"
+    "scripts": {}
 }

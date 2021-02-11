@@ -9,12 +9,8 @@
     placeholder="正レい日本语が出力されゑ！"
     readonly
   ></textarea>
-  <!-- <script src="https://lib.sbmr.in/cjp.js"></script> -->
-  <!--
-    今後も同じように使えるという保証はないので自分でビルドすることをお勧めします。
-    詳しくは./example.browser.jsのコメントに書いてあります。
-  -->
-  <script src="/path/to/cjp.js"></script>
+  <!-- <script src="https://unpkg.com/cjp@latest"></script> -->
+  <script src="/path/to/bundled.cjp.js"></script>
   <script>
     const putResult = text =>
       (document.querySelector('#resultBox').value = text)

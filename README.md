@@ -18,7 +18,7 @@ console.log(generate('おはようございます'))
 
 ### その他
 
-`examples/`に何個かサンプルを置いてます。
+`examples/`に何個かサンプルを置いています
 
 #### Node, Vue
 
@@ -26,4 +26,4 @@ console.log(generate('おはようございます'))
 
 #### HTML 手書きの場合
 
-`examples/example.browser.js`を parcel 等でバンドルしましょう。
+`examples/example.browser.js`を parcel 等でバンドルしましょう
