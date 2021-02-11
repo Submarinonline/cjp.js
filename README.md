@@ -4,6 +4,8 @@
 
 怪レい翻訳ライブラリ
 
+[使用例](https://github.com/DevSubmarinonline/correctJP-web)
+
 ## 使い方(Node)
 
 ```js
