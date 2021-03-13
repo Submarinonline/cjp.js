@@ -1,24 +1,22 @@
 {
     "name": "cjp",
     "description": "怪レい日本语ライブラリ",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "author": "YamaD <yamad@submarin.online>",
     "bugs": {
         "url": "https://github.com/Submarinonline/cjp.js/issues"
     },
-    "devDependencies": {
-        "@submarin/generator": "1.x",
-        "esbuild": "0.9.x"
+    "dependencies": {
+        "@submarin/generator": "1.x"
     },
-    "files": [],
+    "files": [
+        "dict/"
+    ],
     "homepage": "https://correctjp.work/about/",
     "license": "MIT",
-    "main": "dist.js",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Submarinonline/cjp.js.git"
-    },
-    "scripts": {
-        "build": "esbuild index.js --bundle --outfile=dist.js"
     }
 }
