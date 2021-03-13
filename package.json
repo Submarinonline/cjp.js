@@ -1,13 +1,13 @@
 {
     "name": "cjp",
     "description": "怪レい日本语ライブラリ",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "YamaD <yamad@submarin.online>",
     "bugs": {
         "url": "https://github.com/Submarinonline/cjp.js/issues"
     },
     "dependencies": {
-        "@submarin/generator": "^1.x"
+        "@submarin/generator": "1.x"
     },
     "files": [
         "dict"
