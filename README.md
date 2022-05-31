@@ -8,22 +8,15 @@
 
 ## 使い方
 
-### Node
+### Node.js
 
 ```js
-const { generate } = require('cjp')
+// const { generate } = require("cjp")
+import { generate } from "cjp"
 
-console.log(generate('おはようございます'))
+console.log(generate("おはようございます"))
 ```
 
 ### その他
 
-`examples/`に何個かサンプルを置いています
-
-#### Node, Vue
-
-サンプルがそのまま使えます
-
-#### HTML 手書きの場合
-
-`examples/example.browser.js`を parcel 等でバンドルしましょう
+[examples](examples)に何個かサンプルを置いています。

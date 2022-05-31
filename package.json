@@ -1,8 +1,8 @@
 {
   "name": "cjp",
   "description": "怪レい日本语ライブラリ",
-  "version": "2.0.0",
-  "author": "YamaD <dev@yamad.me>",
+  "version": "2.0.1",
+  "author": "YamaD <dev@dyama.net>",
   "bugs": {
     "url": "https://github.com/Submarinonline/cjp.js/issues"
   },
@@ -27,7 +27,7 @@
   "main": "dist/index.cjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com:Submarinonline/generator.git"
+    "url": "https://github.com:Submarinonline/cjp.js.git"
   },
   "scripts": {
     "build": "run-p 'build:*'",
