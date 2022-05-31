@@ -1,6 +1,6 @@
 # cjp (correctJP)
 
-[![npm version](https://badge.fury.io/js/cjp.svg)](https://www.npmjs.com/package/cjp)
+[![npm](https://img.shields.io/npm/v/cjp)](https://www.npmjs.com/package/cjp)
 
 怪レい翻訳ライブラリ
 

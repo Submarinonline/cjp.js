@@ -1,22 +1,39 @@
 {
-    "name": "cjp",
-    "description": "怪レい日本语ライブラリ",
-    "version": "1.2.3",
-    "author": "YamaD <yamad@submarin.online>",
-    "bugs": {
-        "url": "https://github.com/Submarinonline/cjp.js/issues"
-    },
-    "dependencies": {
-        "@submarin/generator": "1.x"
-    },
-    "files": [
-        "dict/"
-    ],
-    "homepage": "https://correctjp.work/about/",
-    "license": "MIT",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Submarinonline/cjp.js.git"
-    }
+  "name": "cjp",
+  "description": "怪レい日本语ライブラリ",
+  "version": "2.0.0-beta1",
+  "author": "YamaD <dev@yamad.me>",
+  "bugs": {
+    "url": "https://github.com/Submarinonline/cjp.js/issues"
+  },
+  "dependencies": {
+    "@submarin/generator": "2.x"
+  },
+  "devDependencies": {
+    "esbuild": "0.14.42",
+    "npm-run-all": "4.1.5",
+    "typescript": "4.7.2"
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "files": [
+    "dict"
+  ],
+  "homepage": "https://correctjp.work/about/",
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:Submarinonline/generator.git"
+  },
+  "scripts": {
+    "build": "run-p 'build:*'",
+    "build:cjs": "esbuild index.ts --bundle --minify --outfile=dist/index.mjs --format=esm",
+    "build:esm": "esbuild index.ts --bundle --minify --outfile=dist/index.cjs --format=cjs",
+    "build:tsc": "tsc",
+    "prepublishOnly": "run-s build"
+  },
+  "type": "module"
 }
