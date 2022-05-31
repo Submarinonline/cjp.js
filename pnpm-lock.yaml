@@ -1,13 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@submarin/generator': 2.x
+  '@submarin/generator': 2.0.1
   esbuild: 0.14.42
   npm-run-all: 4.1.5
   typescript: 4.7.2
 
 dependencies:
-  '@submarin/generator': 2.0.0
+  '@submarin/generator': 2.0.1
 
 devDependencies:
   esbuild: 0.14.42
@@ -16,8 +16,8 @@ devDependencies:
 
 packages:
 
-  /@submarin/generator/2.0.0:
-    resolution: {integrity: sha512-B8QxvJ1+39gu4t1jsWRl/rjyRkpHkTMgTMU0fKakOmbt598hTCAeQOtjW3LVG0rwEusvBH8nbReVCLjCSNOGBg==}
+  /@submarin/generator/2.0.1:
+    resolution: {integrity: sha512-H5jy+4mLlEp+bVdZIbRUqES6Wsn8lj6Y4XpuFly4Ak66DpYbEloUBKL6nJyjcxN0dxo2F4KoDZKmEJPdhoPf8A==}
     dev: false
 
   /ansi-styles/3.2.1:
