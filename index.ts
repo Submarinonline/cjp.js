@@ -19,4 +19,4 @@ export const generate = (text: string = "") => {
   return data.text
 }
 
-export default generate
+export default { generate }

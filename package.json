@@ -1,7 +1,7 @@
 {
   "name": "cjp",
   "description": "怪レい日本语ライブラリ",
-  "version": "2.0.0-beta2",
+  "version": "2.0.0",
   "author": "YamaD <dev@yamad.me>",
   "bugs": {
     "url": "https://github.com/Submarinonline/cjp.js/issues"
