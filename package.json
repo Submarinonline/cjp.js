@@ -1,16 +1,16 @@
 {
   "name": "cjp",
   "description": "怪レい日本语ライブラリ",
-  "version": "2.0.3-beta0",
+  "version": "2.0.3",
   "author": "YamaD <dev@dyama.net>",
   "bugs": {
     "url": "https://github.com/Submarinonline/cjp.js/issues"
   },
   "devDependencies": {
     "@submarin/generator": "2.0.1",
-    "esbuild": "0.14.42",
+    "esbuild": "0.14.46",
     "npm-run-all": "4.1.5",
-    "typescript": "4.7.2"
+    "typescript": "4.7.4"
   },
   "exports": {
     "import": "./dist/index.mjs",
