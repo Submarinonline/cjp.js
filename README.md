@@ -4,11 +4,9 @@
 
 怪レい翻訳ライブラリ
 
-[使用例](https://github.com/DevSubmarinonline/correctJP-web)
+[使用例](https://github.com/Submarinonline/correctJP-web)
 
 ## 使い方
-
-### Node.js
 
 ```js
 // const { generate } = require("cjp")
@@ -17,6 +15,6 @@ import { generate } from "cjp"
 console.log(generate("おはようございます"))
 ```
 
-### その他
+## その他
 
 [examples](examples)に何個かサンプルを置いています。

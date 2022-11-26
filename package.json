@@ -1,7 +1,7 @@
 {
   "name": "cjp",
   "description": "怪レい日本语ライブラリ",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "YamaD <dev@dyama.net>",
   "bugs": {
     "url": "https://github.com/Submarinonline/cjp.js/issues"
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "run-p 'build:*'",
-    "build:browser": "esbuild index.ts --bundle --minify --outfile=dist/index.browser.js --format=iife",
+    "build:browser": "esbuild browser.js --bundle --minify --outfile=dist/index.browser.js",
     "build:cjs": "esbuild index.ts --bundle --minify --outfile=dist/index.mjs --format=esm",
     "build:esm": "esbuild index.ts --bundle --minify --outfile=dist/index.cjs --format=cjs",
     "check": "tsc",
