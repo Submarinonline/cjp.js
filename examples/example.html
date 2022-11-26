@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8" />
-</head>
-<body>
-  <textarea id="inputBox" placeholder="ここに入力"></textarea>
-  <textarea
-    id="resultBox"
-    placeholder="正レい日本语が出力されゑ！"
-    readonly
-  ></textarea>
-  <!-- <script src="https://unpkg.com/cjp@latest"></script> -->
-  <script src="/path/to/bundled.cjp.js"></script>
-  <script>
-    const putResult = text =>
-      (document.querySelector('#resultBox').value = text)
-
-    document
-      .querySelector('#inputBox')
-      .addEventListener('input', ({ target: { value: text } }) => {
-        putResult(cjp.generate(text))
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://unpkg.com/cjp@2/dist/index.browser.js" async></script>
+  </head>
+  <body>
+    <textarea id="in" placeholder="ここに入力"></textarea>
+    <textarea id="out" placeholder="正レい日本语が出力されゑ！" readonly></textarea>
+    <script>
+      const elem = document.getElementById("out")
+      document.getElementById("in").addEventListener("input", e => {
+        elem.value = cjp.generate(e.target.value)
       })
-  </script>
-</body>
+    </script>
+  </body>
+</html>
