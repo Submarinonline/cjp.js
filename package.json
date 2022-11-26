@@ -1,26 +1,25 @@
 {
   "name": "cjp",
   "description": "怪レい日本语ライブラリ",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "author": "YamaD <dev@dyama.net>",
   "bugs": {
     "url": "https://github.com/Submarinonline/cjp.js/issues"
   },
   "devDependencies": {
-    "@submarin/generator": "2.0.1",
-    "esbuild": "0.14.46",
+    "@submarin/generator": "2.1.0",
+    "esbuild": "0.15.15",
     "npm-run-all": "4.1.5",
-    "typescript": "4.7.4"
+    "typescript": "4.9.3"
   },
   "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.cjs"
+    "import": "dist/index.mjs",
+    "require": "dist/index.cjs"
   },
   "files": [
-    "dist",
-    "dict"
+    "dist"
   ],
-  "homepage": "https://correctjp.work/about/",
+  "homepage": "https://cjp.smbr.in/about/",
   "license": "MIT",
   "main": "dist/index.cjs",
   "repository": {
@@ -29,10 +28,12 @@
   },
   "scripts": {
     "build": "run-p 'build:*'",
+    "build:browser": "esbuild index.ts --bundle --minify --outfile=dist/index.browser.js --format=iife",
     "build:cjs": "esbuild index.ts --bundle --minify --outfile=dist/index.mjs --format=esm",
     "build:esm": "esbuild index.ts --bundle --minify --outfile=dist/index.cjs --format=cjs",
-    "build:tsc": "tsc",
-    "prepublishOnly": "run-s build"
+    "check": "tsc",
+    "prepublishOnly": "run-s check build"
   },
-  "type": "module"
+  "type": "module",
+  "types": "dist/index.d.ts"
 }
