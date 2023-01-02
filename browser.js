@@ -1,3 +1,0 @@
-{
-  window.cjp = require("./index")
-}

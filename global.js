@@ -1,0 +1,1 @@
+globalThis.cjp = require("./index")
